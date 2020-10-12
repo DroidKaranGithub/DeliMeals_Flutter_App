@@ -25,7 +25,7 @@ class MealDetailScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       height: 200,
-      width: 300,
+      width: double.infinity,
       child: child,
     );
   }
@@ -86,6 +86,12 @@ class MealDetailScreen extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.delete),
+        onPressed: () {
+          Navigator.of(context).pop(mealId);
+        },
       ),
     );
   }
